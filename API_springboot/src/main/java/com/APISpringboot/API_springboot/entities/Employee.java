@@ -158,16 +158,17 @@ public class Employee implements Serializable {
         this.casts = casts;
     }
 
-    @PrePersist
-    public void prePersist(){
+    @PreUpdate
+    public void preUpdate(){
         this.updateDate = new Date();
 
     }
-    @PreUpdate
-    public void PreUpdate(){
+    @PrePersist
+    public void prePersist(){
         final Date current = new Date();
         this.creationDate = current;
         this.updateDate = current;
+
     }
 
     @Override
