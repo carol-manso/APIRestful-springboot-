@@ -9,4 +9,5 @@ import javax.transaction.Transactional;
 public interface CompanyRepository extends JpaRepository<Company, Long> {
     @Transactional()
     Company findByCnpj(String cnpj);
+
 }

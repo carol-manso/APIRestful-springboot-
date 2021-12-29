@@ -9,6 +9,7 @@ import javax.transaction.Transactional;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Employee findByCpf(String cpf);
     Employee findByEmail(String email);
+    Employee findOne(Long id);
     Employee findByCpfOrEmail(String cpf,String email);
 }
 //métodos customizados.

@@ -3,7 +3,6 @@ package com.APISpringboot.API_springboot.repositories;
 import com.APISpringboot.API_springboot.entities.Company;
 import com.APISpringboot.API_springboot.entities.Employee;
 import com.APISpringboot.API_springboot.enums.ProfileEnum;
-import com.APISpringboot.API_springboot.utils.PasswordUtils;
 import org.aspectj.lang.annotation.After;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
