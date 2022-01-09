@@ -15,7 +15,7 @@ import java.util.List;
         @NamedQuery(name = "CastRepository.findByEmployeeId",
                 query = "SELECT cast FROM cast WHERE cast.employee.id = :employeeId ")
 })
-public interface CastReporitory extends JpaRepository<Cast, Long> {
+public interface CastRepository extends JpaRepository<Cast, Long> {
     List<Cast> findByEmployeeId(@Param("employeeId") Long employeeId); //spring não consegue criar a query por convenção. Quero os lançamentos para um determinado funcionário, o que está associado a aoutra entity.
     Page<Cast> findByEmployeeId(@Param("employeeId") Long employeeId, Pageable pageable);
 }
