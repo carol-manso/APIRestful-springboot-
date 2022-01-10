@@ -75,21 +75,21 @@ public class Employee implements Serializable {
         this.cpf = cpf;
     }
 
-    @Column(name = "hour_value", nullable = false)
+    @Column(name = "hour_value")
     public BigDecimal getHourValue() {
         return hourValue;
     }
 
     @Transient
-    public Optional<BigDecimal> getHourValueOpt(){
-        return Optional.ofNullable(this.hourValue);
+    public BigDecimal getHourValueOpt(){
+        return this.hourValue;
     }
 
     public void setHourValue(BigDecimal hourValue) {
         this.hourValue = hourValue;
     }
 
-    @Column(name = "work_hours_per_day", nullable = false)
+    @Column(name = "work_hours_per_day")
     public Float getWorkHoursPerDay() {
         return workHoursPerDay;
     }
@@ -99,7 +99,7 @@ public class Employee implements Serializable {
     }
 
 
-    @Column(name = "lunch_hours", nullable = false)
+    @Column(name = "lunch_hours")
     public Float getLunchHours() {
         return lunchHours;
     }
@@ -109,7 +109,7 @@ public class Employee implements Serializable {
     }
 
     @Enumerated(EnumType.STRING) //colocar o nome da role ao invés de sua posição
-    @Column(name = "profile", nullable = false)
+    @Column(name = "profile")
     public ProfileEnum getProfile() {
         return profile;
     }
@@ -119,7 +119,7 @@ public class Employee implements Serializable {
         this.profile = profile;
     }
 
-    @Column(name = "creation_date", nullable = false)
+    @Column(name = "creation_date")
     public Date getCreationDate() {
         return creationDate;
     }
